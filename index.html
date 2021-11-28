@@ -147,6 +147,72 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/28/hooks/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="郭云">
+      <meta itemprop="description" content="永远相信，美好的事情即将发生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郭十七">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/11/28/hooks/" class="post-title-link" itemprop="url">hooks学习笔记</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-11-28 13:09:28 / 修改时间：14:17:48" itemprop="dateCreated datePublished" datetime="2021-11-28T13:09:28+08:00">2021-11-28</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="hooks简介"><a href="#hooks简介" class="headerlink" title="hooks简介"></a>hooks简介</h2><p>2018年底FaceBook的React小组推出Hooks以来，所有的React的开发者都对它大为赞赏。<br>它改变了原始的React类的开发方式，改用了函数形式;<br>它改变了复杂的状态操作形式，让程序员用起来更轻松;<br>它改变了一个状态组件的复用性，让组件的复用性大大增加。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/28/hooks/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/28/ajax-cross-domain/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -172,7 +238,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-11-28 11:22:28 / 修改时间：12:48:00" itemprop="dateCreated datePublished" datetime="2021-11-28T11:22:28+08:00">2021-11-28</time>
+              <time title="创建时间：2021-11-28 11:22:28 / 修改时间：14:12:54" itemprop="dateCreated datePublished" datetime="2021-11-28T11:22:28+08:00">2021-11-28</time>
             </span>
 
           
@@ -187,10 +253,14 @@
 
       
           <h1 id="解决ajax跨域问题的黑科技"><a href="#解决ajax跨域问题的黑科技" class="headerlink" title="解决ajax跨域问题的黑科技"></a>解决ajax跨域问题的黑科技</h1><h2 id="ajax简介"><a href="#ajax简介" class="headerlink" title="ajax简介"></a>ajax简介</h2><p>ajax全称为Asynchronous JavaScript And Xml，就是异步的JS和XML。通过AJAX可以在浏览器中向服务器发送异步请求，最大的优势在于，<em><strong>可以无刷新的获取数据</strong></em>。</p>
-<h2 id="跨域解决方案"><a href="#跨域解决方案" class="headerlink" title="跨域解决方案"></a>跨域解决方案</h2><p>ajax默认是支持同源策略的，所谓同源策略就是指发送端和服务端的协议、域名和端口都要一致，但是在很多情况下，我们网页所需要的资源往往不是来自同一个服务器，这就需要异步解决方案，常用的异步解决方案是在响应头添加Header允许访问，如下图：<br><img src="/images/11.28_ajax/header.PNG" alt="添加响应头"></p>
-<hr>
-<h3 id="黑科技之使用script标签解决跨域"><a href="#黑科技之使用script标签解决跨域" class="headerlink" title="黑科技之使用script标签解决跨域"></a>黑科技之使用script标签解决跨域</h3><p>众所周知我们的script标签是可以解决跨域的，而通过设计该标签的src属性可以去向指定的域名端口获取资源，但是script所获取到的资源必须是js的代码，因此我们可以在前端声明一些回调函数，而在服务端通过返回这些回调函数来返回服务端我们想要拿到的数据，具体见下图：<br><img src="/images/11.28_ajax/%E5%89%8D%E7%AB%AF.PNG" alt="前端"><br><img src="/images/11.28_ajax/%E5%90%8E%E7%AB%AF.PNG" alt="后端"><br>最后的结果就是当鼠标在input框里失去焦点时，返回服务端带回的数据.</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/28/ajax-cross-domain/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -402,7 +472,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

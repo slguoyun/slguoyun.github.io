@@ -20,18 +20,18 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="解决ajax跨域问题的黑科技ajax简介ajax全称为Asynchronous JavaScript And Xml，就是异步的JS和XML。通过AJAX可以在浏览器中向服务器发送异步请求，最大的优势在于，可以无刷新的获取数据。 跨域解决方案ajax默认是支持同源策略的，所谓同源策略就是指发送端和服务端的协议、域名和端口都要一致，但是在很多情况下，我们网页所需要的资源往往不是来自同一个服务器，这就">
+  <meta name="description" content="解决ajax跨域问题的黑科技ajax简介ajax全称为Asynchronous JavaScript And Xml，就是异步的JS和XML。通过AJAX可以在浏览器中向服务器发送异步请求，最大的优势在于，可以无刷新的获取数据。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ajax_cross_domain">
 <meta property="og:url" content="http://example.com/2021/11/28/ajax-cross-domain/index.html">
 <meta property="og:site_name" content="郭十七">
-<meta property="og:description" content="解决ajax跨域问题的黑科技ajax简介ajax全称为Asynchronous JavaScript And Xml，就是异步的JS和XML。通过AJAX可以在浏览器中向服务器发送异步请求，最大的优势在于，可以无刷新的获取数据。 跨域解决方案ajax默认是支持同源策略的，所谓同源策略就是指发送端和服务端的协议、域名和端口都要一致，但是在很多情况下，我们网页所需要的资源往往不是来自同一个服务器，这就">
+<meta property="og:description" content="解决ajax跨域问题的黑科技ajax简介ajax全称为Asynchronous JavaScript And Xml，就是异步的JS和XML。通过AJAX可以在浏览器中向服务器发送异步请求，最大的优势在于，可以无刷新的获取数据。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/11.28_ajax/header.PNG">
 <meta property="og:image" content="http://example.com/images/11.28_ajax/%E5%89%8D%E7%AB%AF.PNG">
 <meta property="og:image" content="http://example.com/images/11.28_ajax/%E5%90%8E%E7%AB%AF.PNG">
 <meta property="article:published_time" content="2021-11-28T03:22:28.000Z">
-<meta property="article:modified_time" content="2021-11-28T04:48:00.717Z">
+<meta property="article:modified_time" content="2021-11-28T06:12:54.571Z">
 <meta property="article:author" content="郭云">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/11.28_ajax/header.PNG">
@@ -178,7 +178,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-11-28 11:22:28 / 修改时间：12:48:00" itemprop="dateCreated datePublished" datetime="2021-11-28T11:22:28+08:00">2021-11-28</time>
+              <time title="创建时间：2021-11-28 11:22:28 / 修改时间：14:12:54" itemprop="dateCreated datePublished" datetime="2021-11-28T11:22:28+08:00">2021-11-28</time>
             </span>
 
           
@@ -193,6 +193,7 @@
 
       
         <h1 id="解决ajax跨域问题的黑科技"><a href="#解决ajax跨域问题的黑科技" class="headerlink" title="解决ajax跨域问题的黑科技"></a>解决ajax跨域问题的黑科技</h1><h2 id="ajax简介"><a href="#ajax简介" class="headerlink" title="ajax简介"></a>ajax简介</h2><p>ajax全称为Asynchronous JavaScript And Xml，就是异步的JS和XML。通过AJAX可以在浏览器中向服务器发送异步请求，最大的优势在于，<em><strong>可以无刷新的获取数据</strong></em>。</p>
+<span id="more"></span>   
 <h2 id="跨域解决方案"><a href="#跨域解决方案" class="headerlink" title="跨域解决方案"></a>跨域解决方案</h2><p>ajax默认是支持同源策略的，所谓同源策略就是指发送端和服务端的协议、域名和端口都要一致，但是在很多情况下，我们网页所需要的资源往往不是来自同一个服务器，这就需要异步解决方案，常用的异步解决方案是在响应头添加Header允许访问，如下图：<br><img src="/images/11.28_ajax/header.PNG" alt="添加响应头"></p>
 <hr>
 <h3 id="黑科技之使用script标签解决跨域"><a href="#黑科技之使用script标签解决跨域" class="headerlink" title="黑科技之使用script标签解决跨域"></a>黑科技之使用script标签解决跨域</h3><p>众所周知我们的script标签是可以解决跨域的，而通过设计该标签的src属性可以去向指定的域名端口获取资源，但是script所获取到的资源必须是js的代码，因此我们可以在前端声明一些回调函数，而在服务端通过返回这些回调函数来返回服务端我们想要拿到的数据，具体见下图：<br><img src="/images/11.28_ajax/%E5%89%8D%E7%AB%AF.PNG" alt="前端"><br><img src="/images/11.28_ajax/%E5%90%8E%E7%AB%AF.PNG" alt="后端"><br>最后的结果就是当鼠标在input框里失去焦点时，返回服务端带回的数据.</p>
@@ -214,7 +215,10 @@
     <a href="/2021/11/25/first-blog/" rel="prev" title="first_blog">
       <i class="fa fa-chevron-left"></i> first_blog
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/11/28/hooks/" rel="next" title="hooks学习笔记">
+      hooks学习笔记 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -287,7 +291,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
